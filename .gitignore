@@ -1,0 +1,4 @@
+# Project exclude paths
+/storm-drpc-test/target/
+/storm-test-first/target/
+/storm-tianhe/target/

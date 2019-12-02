@@ -11,6 +11,35 @@
 
     <artifactId>storm-drpc-test</artifactId>
 
+    <properties>
+        <datastax-java-driver.version>4.3.0</datastax-java-driver.version>
+    </properties>
+    <dependencies>
+        <!-- cassandra -->
+        <dependency>
+            <groupId>com.datastax.oss</groupId>
+            <artifactId>java-driver-core</artifactId>
+            <version>${datastax-java-driver.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.datastax.oss</groupId>
+            <artifactId>java-driver-query-builder</artifactId>
+            <version>${datastax-java-driver.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.datastax.oss</groupId>
+            <artifactId>java-driver-mapper-runtime</artifactId>
+            <version>${datastax-java-driver.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.datastax.oss</groupId>
+            <artifactId>java-driver-mapper-processor</artifactId>
+            <version>${datastax-java-driver.version}</version>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
             <!-- 打 fat jar -->
@@ -22,7 +51,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.stillcoolme.drpc.linear.LinearDrpcServer</mainClass>
+                            <mainClass>com.stillcoolme.drpc.nolinear.MyDrpcTopology</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

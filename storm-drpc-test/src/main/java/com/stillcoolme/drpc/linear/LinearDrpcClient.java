@@ -32,7 +32,7 @@ public class LinearDrpcClient {
     public static void main(String[] args) {
         DRPCClient client = initClient();
         try {
-            String response = client.execute(LinearDrpcServer.DRPC_METHOD_NAME, "{id: 12}");
+            String response = client.execute(LinearDrpcServer.DRPC_SERVER_NAME, "{id: 12}");
             System.out.println(response);
         } catch (TException e) {
             e.printStackTrace();

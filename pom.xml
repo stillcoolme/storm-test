@@ -35,7 +35,7 @@
             <artifactId>storm-core</artifactId>
             <version>${storm.version}</version>
             <!-- 本地运行需要将provided注释 -->
-            <scope>provided</scope>
+<!--            <scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
